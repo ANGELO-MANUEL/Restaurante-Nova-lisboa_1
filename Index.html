@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menu digital e reservas do Restaurante e Pastelaria Nova Lisboa">
+  <title>Restaurante e Pastelaria Nova Lisboa | Menu Digital</title>
+  
+  <!-- Fontes Modernas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho Principal (Hero) -->
+  <header class="hero" id="inicio">
+    <div class="hero-conteudo animar-fade-up">
+      <p class="etiqueta">RESTAURANTE • PASTELARIA • ESPLANADA</p>
+      <h1>Restaurante e Pastelaria Nova Lisboa</h1>
+      <p>Comida saborosa, pastelaria fresca, ambiente familiar e momentos para partilhar.</p>
+      <div class="hero-botoes">
+        <a href="#menu" class="botao botao-principal">Ver menu</a>
+        <a href="#reservas" class="botao botao-contorno">Reservar mesa</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação Principal -->
+  <nav class="navegacao" aria-label="Navegação principal">
+    <a href="#inicio">Início</a>
+    <a href="#menu">Menu</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#atividades">Atividades</a>
+    <a href="#contactos">Contactos</a>
+  </nav>
+
+  <main>
+    <!-- Secção do Menu -->
+    <section class="secao" id="menu">
+      <div class="titulo-secao animar-fade-up">
+        <p class="etiqueta">SABORES PARA TODOS</p>
+        <h2>O nosso menu</h2>
+        <p>Escolha uma categoria ou procure diretamente por um item.</p>
+      </div>
+
+      <!-- Barra de Pesquisa e Categorias -->
+      <div class="ferramentas-menu animar-fade-up">
+        <label class="campo-pesquisa">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="pesquisa" placeholder="Procurar prato, doce ou bebida..." aria-label="Procurar no menu">
+        </label>
+        
+        <!-- Categorias Principais -->
+        <div class="categorias" id="categorias" role="tablist" aria-label="Categorias do menu"></div>
+        
+        <!-- Subcategorias de Bebidas -->
+        <div class="subcategorias-bar" id="subcategorias" role="tablist" aria-label="Subcategorias de bebidas" style="display: none;"></div>
+      </div>
+
+      <!-- Contentor dos Pratos / Bebidas -->
+      <div id="lista-menu" class="lista-menu"></div>
+      <p id="sem-resultados" class="sem-resultados" hidden>Não encontrámos nenhum item com esse nome.</p>
+    </section>
+
+    <!-- Secção Esplanada -->
+    <section class="secao-destaque" id="esplanada">
+      <div class="destaque-conteudo">
+        <div class="animar-fade-up">
+          <p class="etiqueta">AO AR LIVRE</p>
+          <h2>Esplanada</h2>
+          <p>Desfrute das suas refeições ou do seu café ao ar livre, num espaço agradável para famílias, amigos e momentos descontraídos.</p>
+          <ul class="lista-informacao">
+            <li>Reservas disponíveis para a esplanada</li>
+            <li>Espaço adequado para grupos</li>
+            <li>Consulte a disponibilidade no dia</li>
+          </ul>
+          <a href="#reservas" class="botao botao-principal">Reservar na esplanada</a>
+        </div>
+        <div class="cartao-frase animar-fade-up">
+          "Um bom momento começa à mesa."
+        </div>
+      </div>
+    </section>
+
+    <!-- Secção de Reservas -->
+    <section class="secao" id="reservas">
+      <div class="titulo-secao animar-fade-up">
+        <p class="etiqueta">FALE CONNOSCO</p>
+        <h2>Reservar mesa</h2>
+        <p>Preencha os dados para preparar o pedido de reserva.</p>
+      </div>
+      <form id="form-reserva" class="formulario animar-fade-up">
+        <div class="grelha-formulario">
+          <label>Nome<input id="reserva-nome" type="text" required placeholder="O seu nome"></label>
+          <label>Telefone<input id="reserva-telefone" type="tel" required placeholder="923 000 000"></label>
+          <label>Data<input id="reserva-data" type="date" required></label>
+          <label>Hora<input id="reserva-hora" type="time" required></label>
+          <label>Número de pessoas<input id="reserva-pessoas" type="number" min="1" max="30" required value="2"></label>
+          <label>Zona
+            <select id="reserva-zona">
+              <option>Sala interior</option>
+              <option>Esplanada</option>
+              <option>Zona de grupo</option>
+            </select>
+          </label>
+        </div>
+        <label>Observações<textarea id="reserva-observacoes" rows="4" placeholder="Aniversário, cadeira de bebé, alergias ou outro pedido..."></textarea></label>
+        <button class="botao botao-principal" type="submit">Enviar pedido pelo WhatsApp</button>
+      </form>
+    </section>
+
+    <!-- Secção de Atividades -->
+    <section class="secao secao-cinza" id="atividades">
+      <div class="titulo-secao animar-fade-up">
+        <p class="etiqueta">VIVA A CASA</p>
+        <h2>Atividades e eventos</h2>
+        <p>Acompanhe as nossas atividades e faça a sua reserva.</p>
+      </div>
+      <div class="cartoes-info">
+        <article class="cartao-info animar-fade-up"><span>♫</span><h3>Música ao vivo</h3><p>Noites especiais com artistas convidados.</p></article>
+        <article class="cartao-info animar-fade-up"><span>⚽</span><h3>Jogos e convívios</h3><p>Venha assistir aos grandes jogos connosco.</p></article>
+        <article class="cartao-info animar-fade-up"><span>★</span><h3>Noites temáticas</h3><p>Consulte a programação e reserve o seu lugar.</p></article>
+      </div>
+    </section>
+
+    <!-- Secção de Opinião -->
+    <section class="secao" id="opiniao">
+      <div class="titulo-secao animar-fade-up">
+        <p class="etiqueta">A SUA OPINIÃO CONTA</p>
+        <h2>Sugestões e reclamações</h2>
+        <p>Ajude-nos a melhorar a sua experiência.</p>
+      </div>
+      <form id="form-opiniao" class="formulario animar-fade-up">
+        <div class="grelha-formulario">
+          <label>Nome<input id="opiniao-nome" type="text" placeholder="O seu nome"></label>
+          <label>Email ou telefone<input id="opiniao-contacto" type="text" placeholder="Contacto opcional"></label>
+        </div>
+        <label>Tipo de mensagem
+          <select id="opiniao-tipo">
+            <option>Sugestão</option>
+            <option>Reclamação</option>
+            <option>Elogio</option>
+          </select>
+        </label>
+        <label>Mensagem<textarea id="opiniao-mensagem" rows="5" required placeholder="Escreva a sua mensagem..."></textarea></label>
+        <button class="botao botao-principal" type="submit">Enviar mensagem</button>
+        <p id="mensagem-opiniao" class="mensagem-form" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer id="contactos" class="rodape">
+    <div>
+      <h2>Restaurante e Pastelaria Nova Lisboa</h2>
+      <p>Luanda, Angola</p>
+      <p>Aberto todos os dias · 08:00–23:00</p>
+    </div>
+    <div>
+      <h3>Contactos</h3>
+      <p><a href="tel:+244923000000">+244 923 000 000</a></p>
+      <p><a href="mailto:geral@novalisboa.ao">geral@novalisboa.ao</a></p>
+    </div>
+    <div>
+      <h3>Informação</h3>
+      <p><a href="#opiniao">Sugestões e reclamações</a></p>
+      <p>Alergénios disponíveis mediante pedido.</p>
+    </div>
+    <p class="copyright">© <span id="ano"></span> Restaurante e Pastelaria Nova Lisboa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
